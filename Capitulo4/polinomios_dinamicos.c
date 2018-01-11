@@ -36,7 +36,7 @@ float perimetro_poligono(struct Poligono pol){
 	int i;
 	float perim = 0.0;
 
-	for( i=0 ; i<pol.puntos; i++)
+	for( i=1 ; i<pol.puntos; i++)
 		perim += sqrt((pol.p[i].x-pol.p[i-1].x)*(pol.p[i].x-pol.p[i-1].x) + (pol.p[i].y-pol.p[i-1].y)*(pol.p[i].y-pol.p[i-1].y));
 	
 	perim += sqrt((pol.p[pol.puntos-1].x-pol.p[0].x)*(pol.p[pol.puntos-1].x-pol.p[0].x) + (pol.p[pol.puntos-1].y-pol.p[0].y)*(pol.p[pol.puntos-1].y-pol.p[0].y));
